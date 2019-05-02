@@ -98,9 +98,6 @@ function lazyadslot_page_build() {
 
       // All Ad needed markup.
       $tags[$key]['renderedDfp'] = '<script>' . PHP_EOL . $slot_declaration . PHP_EOL . '</script>' . PHP_EOL . $slot_display;
-
-      // Refresh on load.
-      $tags[$key]['refreshOnLoad'] = variable_get('dfp_disable_init_load', 0);
     }
 
     // Allow modules to alter the final tags.

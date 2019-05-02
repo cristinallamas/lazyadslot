@@ -252,7 +252,7 @@ var lazyLoadAdSlot = lazyLoadAdSlot || {};
       adSlotRendered[0].dispatchEvent(lazyslotready);
 
       // Refresh the tag.
-      if (parseInt(adSlot.refreshOnLoad)) {
+      if (googletag.pubads().isInitialLoadDisabled()) {
         googletag.pubads().refresh([googletag.slots[newID]]);
       }
       this.slotId = newID;
